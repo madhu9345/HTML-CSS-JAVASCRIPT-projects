@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Nostra</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <nav class="navbar">
+        <h1>NOSTRA</h1>
+        <div class="navbar-links">
+            <p class="navbar-link"><a href="index.html">Home</a></p>
+            <p class="navbar-link"><a href="coll.html">Collections</a></p>
+            <p class="navbar-link"><a href="contact.html">Contact</a></p>
+        </div>
+        <div class="navbar-menu-toggle" onclick="shnavbar()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </nav>
+    <div class="side-navbar">
+        <p style="text-align: right;" onclick="clnavbar()">
+            <i class="fa-solid fa-xmark"></i>
+        </p>
+        <div class="side-navbar-links">
+            <p class="side-navbar-link"><a href="index.html">Home</a></p>
+            <p class="side-navbar-link"><a href="coll.html">Collections</a></p>
+            <p class="side-navbar-link"><a href="contact.html">Contact</a></p>
+        </div>
+
+    </div>
+
+
+
+    <div class="product-section">
+        <form class="product-search">
+            <input type="text" id="search" placeholder="Search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </form>
+        <div class="products" id="product">
+            <div class="product-box">
+                <img style="width: 300px;" height="300px" src="data:image/webp;base64,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">
+                <p>white shirt</p>
+            </div>
+            <div class="product-box">
+                <img style="width: 300px;" height="300px" src="https://th.bing.com/th/id/OIP.zlU_VppiYPbUaXm2rUOJ4AHaHa?w=197&h=193&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3">
+                <p>black shirt</p>
+            </div>
+            <div class="product-box">
+                <img style="width: 300px;" height="300px" src="https://th.bing.com/th/id/OIP.TVKIeO6nlq_V_fDY--_ylgHaOh?w=115&h=191&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3">
+                <p>fancy neck</p>
+            </div>
+            <div class="product-box">
+                <img style="width: 300px;" height="300px" src="https://th.bing.com/th/id/OIP.vTVkimx2dbTS1zGqIURFWAHaNK?w=187&h=333&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3">
+                <p>kurti design</p>
+            </div>
+            <div class="product-box">
+                <img style="width: 300px;" height="300px" src="https://tse2.mm.bing.net/th/id/OIP.D6_myg_jJAu9Gj8WObF2XwHaLH?r=0&rs=1&pid=ImgDetMain">
+                <p>silk saree</p>
+            </div>
+            <div class="product-box">
+                <img style="width: 300px;" height="300px" src="https://th.bing.com/th/id/OIP.4JrbDD7iCpIHya3Y1xjf8QHaLH?w=204&h=306&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3">
+                <p>jeans</p>
+            </div>
+            <div class="product-box">
+                <img style="width: 300px;" height="300px" src="https://tse1.mm.bing.net/th/id/OIP.oKa6UbGrfkogpOYl7AGMZQHaLH?r=0&rs=1&pid=ImgDetMain">
+                <p>loose wears</p>
+            </div>
+            <div class="product-box">
+                <img style="width: 300px;" height="300px" src="https://th.bing.com/th/id/OIP.RY6rPsISdo-KB5WLwtD6yAHaJ4?w=208&h=277&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3">
+                <p>gown</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js">
+
+    </script>
+
+</body>
+
+</html>
